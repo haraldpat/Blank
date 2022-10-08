@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Delivery Address</title>
+  </head>
+  <body>
+    <form action="/eccomerce" method="get">
+      <div class="div2">Blank</div>
+      <div class="div3">Delivery Address</div>
+      <label for="name"></label>
+      <div style="background-color:rgb(224, 239, 249);">
+        <input type="text" placeholder="name" required class="margin2" />
+        <input
+          type="number"
+          placeholder="10-digit mobile no."
+          class="margin2"
+        />
+        <br />
+        <input type="number" placeholder="pin code" required class="margin2" />
+        <input type="text" placeholder="Locality" class="margin2" />
+        <br />
+
+        <input
+          type="text"
+          placeholder="Address/Area"
+          required
+          class="margin2"
+          style="width: 660px; height: 100px"
+        />
+        <br />
+        <input
+          type="text"
+          placeholder="City/Dist./Town"
+          required
+          class="margin2"
+        />
+        <input type="text" placeholder="State" required class="margin2" />
+        <br />
+        <input type="text" placeholder="Landmark" class="margin2" />
+        <input
+          type="number"
+          placeholder="Alternate phone"
+          required
+          class="margin2"
+        />
+        <br />
+        <input type="radio" name="Address" class="" />
+        <label for="Address"> Home(All day Delivery) </label>
+        <input type="radio" name="Address" />
+        <label for="Address">Deliver between 10AM-5AM</label>
+        <br />
+        <br />
+        <input
+          type="submit"
+          name=""
+          value="Save and deliver at here"
+          class="save"
+        />
+      </div>
+    </form>
+  </body>
+</html>
