@@ -89,9 +89,6 @@ app.post("/registerblank", async (req, res) => {
   } else res.redirect("registerblank");
 });
 
-app.get("/home", (req, res) => {
-  res.render("home");
-});
 
 // app.get("/home/:id", (req, res) => {
 //   const { id } = req.params;
@@ -122,6 +119,18 @@ app.post("/login", (req, res) => {
     } else res.redirect("login");
   });
 });
+
+app.get("/home", (req, res) => {
+  res.render("home");
+});
+
+app.get("/home/deladdress",(req,res)=>{
+  res.render("deladdress");
+})
+
+app.get("/home/:product/payment",(req,res)=>{
+  res.render("payment");
+})
 
 app.listen(3000, () => {
   console.log("Listening on port 3000!");
