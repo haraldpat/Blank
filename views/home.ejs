@@ -16,12 +16,151 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <script src="/css/header.css"></script>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Home</title>
 </head>
 <body>
-    <%- include("partials/header.ejs") %> 
-    <h1> Welcome to Home ! </h1>
+    <div>
+        <section id="header">
+            <a href=""><img src="img/logo.png" class="logo" alt="" height="100px" width="100px"></a>
+            
+            <!-- <div style="width: 100%;"> -->
+                <ul id="navbar">
+                    <li><a class="active" href="index.ejs">Home</a></li>
+                    <li><a href="shop.ejs">Shop</a></li>
+                    <!-- <li><a href="blog.html">Blog</a></li> -->
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html">Add to Cart</a></li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="hero">
+            <h4>New Arrivals : Have a look</h4>
+            <h2>Super value Deals</h2>
+            <h1>On all products</h1>
+            <p>Save more with coupons & upto 60% off!!!</p>
+            <button class="button1" onclick="window.location.href='shop.html';">
+              Shop Now
+            </button>
+    
+        </section >
+    
+        
+    
+        <section id="product1" class="p1">
+            <h2>Featured Products</h2>
+        <p>Check out the new gadgets!!!</p>
+        <div class="pro-container">
+            <a href="Buy_page">
+            <div class="pro">
+                <img src="img/oneplus-tv.jpg" alt="">
+                <div class="des">
+                    <span>Oneplus</span>
+                    <h5>Oneplus Y series LED TV</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$500</h4>
+                </div>
+            </a>
+                <button class="button1" onclick="window.location.href='shop.html';">
+                    Add to Cart
+                  </button>
+                
+            </div>
+            <a href="Buy_page">
+            <div class="pro">
+                <img src="img/sony_speaker.jpg" alt="">
+                <div class="des">
+                    <span>Sony</span>
+                    <h5>Wireless Extra Bass Sony Speaker</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </a>
+                    <h4>$249</h4>
+                </div>
+                <button class="button1" onclick="window.location.href='shop.html';">
+                    Add to Cart
+                  </button>
+                
+            </div>
+            <a href="Buy_page">
+            <div class="pro">
+                <img src="img/trimmer1.jpg" alt="">
+                <div class="des">
+                    <span>Philips</span>
+                    <h5>Philips Men Hybrid Trimmer</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </a>
+                    <h4>$25</h4>
+                </div>
+                <button class="button1" onclick="window.location.href='shop.html';">
+                    Add to Cart
+                  </button>
+                
+            </div>
+            <a href="Buy_page">
+            <div class="pro">
+                <img src="img/iron1.jpg" alt="">
+                <div class="des">
+                    <span>USHA</span>
+                    <h5>USHA-Ei-1000W Dry Iron</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <!-- <i class="fas fa-star"></i> -->
+                    </div>
+                </a>
+                    <h4>$50</h4>
+                </div>
+                <button class="button1" onclick="window.location.href='shop.html';">
+                    Add to Cart
+                  </button>
+                
+            </div>
+            <a href="Buy_page">
+            <div class="pro" style="margin-bottom: 2rem;">
+                <img src="img/fridge1-img.jpg" alt="">
+                <div class="des">
+                    <span>Samsung</span>
+                    <h5>Samsung Double Door Refrigerator</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$350</h4>
+                </div></a>
+                <button class="button1" onclick="window.location.href='shop.html';">
+                    Add to Cart
+                  </button>
+                
+            </div>
+        </div>
+    
+        </section>
     <%- include("partials/footer.ejs") %>
 </body>
 </html>
