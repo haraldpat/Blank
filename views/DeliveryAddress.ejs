@@ -14,7 +14,7 @@
     <title>Delivery Address</title>
   </head>
   <body>
-    <form action="/payment" method="get" style="margin-bottom:-6rem;">
+    <form action="/DeliveryAddress" method="post" style="margin-bottom:-6rem;">
       <div class="div2">Blank</div>
       <div class="div3">Delivery Address</div>
       <label for="name"></label>
@@ -60,12 +60,7 @@
         <label for="Address">Deliver between 10AM-5AM</label>
         <br />
         <br />
-                <input
-          type="submit"
-          name=""
-          value=" Save and deliver at here"
-          class="save" 
-        />
+          <button type="submit" class ="btn btn-primary">Save and deliver here</button>
       </div>
     </form>
 <%- include("partials/footer.ejs") %> 

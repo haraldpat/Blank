@@ -151,16 +151,34 @@ app.get("/DeliveryAddress",(req,res)=>{
   res.render("DeliveryAddress");
 })
 app.post("/DeliveryAddress",(req,res)=>{
-  let name=req.body.name;
-  let contact=req.body.contact;
-  let pin=req.body.pin;
-  let locality=req.body.locality;
-  let address=req.body.address;
-  let city=req.body.city;
-  let landmark=req.body.landmark;
-  let state=req.body.state;
-  let alt_contact=req.body.contact;
+  console.log(req.body);
+  let {name, number, pincode, address, city, state, altnumber, type } = req.body;
+  if(type === "type1") type=1;
+  else type=0;
+  const queryString =
+    "INSERT INTO delivery (Name,Contact, Pincode, Address, city, state, contact2, typedelivery) VALUES ('" +
+    name +
+    "','" +
+    parseInt(number) +
+    "','" +
+    parseInt(pincode) +
+    "','" +
+    address +
+    "','" +
+    city +
+    "','" +
+    state +
+    "','" +
+    parseInt(altnumber) +
+    "','" +
+    type +
+    "')";
   //inserting...
+  con.query(queryString, (err) => {
+    if (err) console.log(err);
+    else console.log("Value Inserted!");
+  });
+
   res.redirect("/payment");
 
 })
@@ -168,6 +186,9 @@ app.get("/payment",(req,res)=>{
   res.render("payment");
 })
 
+app.post("/payment", (req, res) => {
+  res.render("payment");
+});
 
 app.listen(3000, () => {
   console.log("Listening on port 3000!");
