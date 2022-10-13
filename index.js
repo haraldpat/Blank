@@ -5,6 +5,8 @@ const { v4: uuid } = require("uuid"); //For generating ID's
 const ejs = require("ejs");
 const mysql = require("mysql");
 const bcrypt = require("bcrypt");
+const mysqlStore = require("express-mysql-session")(session);
+const sessionStore = new mysqlStore(options);
 
 const con = mysql.createConnection({
   host: "localhost",
@@ -187,9 +189,11 @@ app.get("/payment",(req,res)=>{
 })
 
 app.post("/payment", (req, res) => {
-  res.render("payment");
+  res.redirect("success");
 });
-
+app.get("/success", (req,res)=> {
+  res.render("success");
+})
 app.listen(3000, () => {
   console.log("Listening on port 3000!");
 });
