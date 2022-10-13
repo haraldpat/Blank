@@ -19,19 +19,19 @@
       <div class="div3">Delivery Address</div>
       <label for="name"></label>
       <div style="background-color:rgb(224, 239, 249);">
-        <input type="text" placeholder="name" required class="margin2" />
-        <input
-          type="number"
+        <input type="text" name="name" placeholder="name" required class="margin2" />
+        <input 
+          type="number" name="number"
           placeholder="10-digit mobile no."
           class="margin2" maxlength="10"
         />
         <br />
-        <input type="number" placeholder="pin code" required class="margin2" />
+        <input type="number" name="pincode" placeholder="pin code" required class="margin2" />
         <input type="text" placeholder="Locality" class="margin2" />
         <br />
 
         <input
-          type="text"
+          type="text" name="address"
           placeholder="Address/Area"
           required
           class="margin2"
@@ -39,24 +39,24 @@
         />
         <br />
         <input
-          type="text"
+          type="text" name="city"
           placeholder="City/Dist./Town"
           required
           class="margin2"
         />
-        <input type="text" placeholder="State" required class="margin2" />
+        <input type="text" name="state" placeholder="State" required class="margin2" />
         <br />
         <input type="text" placeholder="Landmark" class="margin2" />
         <input
-          type="number"
+          type="number" name="altnumber"
           placeholder="Alternate phone"
           required
           class="margin2"
         />
         <br />
-        <input type="radio" name="Address" class="" />
+        <input type="radio" name="type" class="" value="type1" />
         <label for="Address"> Home(All day Delivery) </label>
-        <input type="radio" name="Address" />
+        <input type="radio" name="type" value="type2" />
         <label for="Address">Deliver between 10AM-5AM</label>
         <br />
         <br />
