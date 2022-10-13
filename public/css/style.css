@@ -125,3 +125,20 @@ img:hower{
     text-align:justify;
     border: 0px;
 }
+#pay{
+    width: 100px;
+    height: 40px;
+    margin:20px 0px 0px 40px; 
+    background-color:rgb(173, 216, 216);
+    border-color: aliceblue;
+    font-size: 22px;
+    font-weight: 300px;
+
+}
+.div6{
+    width: auto;
+    height: 100px;
+    margin-bottom:0px 0px 0px 100px;
+    font-size: large;
+    background-color:rgb(224, 239, 249);
+}
