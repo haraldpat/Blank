@@ -11,19 +11,20 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
     <title>Buy now</title>
   </head>
   <body>
-    <form action="/buy" method="post">
     <div>
+    <!-- <form action="/DeliveryAddress" method="post">
     <nav class="navbar p-3 mb-2 bg-primary text-white bar"style="justify-content:center;">
-     <img src="image/blank.png" alt="" id="logo"> 
+     <img src="images/blank.png" alt="" id="logo"> 
         
         <form class="form-inline">
           <input class="" type="search" style="width: 307px;font-size:17px;" placeholder="Search for product,brand and more" aria-label="Search">
           <button class="" type="submit" style="height: 34px;border-color: beige;">Search</button>
         </form>
-        <span style="width: 80px; height:30px;background-color:rgb(171, 222, 185);text-align: center; margin-left: 50px;"><a href="#">Login</a></span>
+        <span style="width: 80px; height:30px;background-color:rgb(171, 222, 185);text-align: center; margin-left: 50px;"><a href="/">Login</a></span>
         <span class="text-white"><a href="#" class="text-white"style="margin-left: 35px;">Become a seller</a></span>
         <span><a href="#" class="text-white" style="margin-left: 35px;">More</a>
         <select name="" id="" style="width:20px; height: 20px; margin-top:10px;">
@@ -34,22 +35,31 @@
     </select></span>
     <span ><a href="#" class="text-white"style="margin-left: 35px;"> cart </a></span>
 </div></nav></div>
-<div></div>
-    <div>
-      <input type="" name="category">
-     <!--  -->
-   
-        <h1>Product</h1>
-    </div>
-    <div style="width: 28%; float:left;display:flex">
+<div> -->
+  <%- include("partials/header.ejs") %> 
+  <img src="images/watch.png" alt="loading...">
+</div>
+<br>
+<div style="width: 28%; float:left;display:flex">
+
         <br>
         
-        <button id="addtocart"><img src="images/cart.png" style="width: 28%; float:left;display:flex;" alt="" id="cartlogo"><h6>ADD TO CART</h6></button> <button  id="buy"><h6> BUY NOW</h6></button>
+        <button id="addtocart"><img src="images/cart.png" style="width: 28%; float:left;display:flex;" alt="" id="cartlogo"><h6>ADD TO CART</h6></button>
+        <a href="DeliveryAddress"> <Button class="btn btn-primary">Buy Now</Button> </a>
         
     </div>
 
-    <div style="width: 70%; float:right;">
+    <div style="width: 63%; float:right; margin: -320px 0px 10px 820px;">
 <h5>Available offer</h5>
+<ul>
+  <li> <span style="font-weight:650 ;">Special Price</span> Extra ₹1645 off(price inclusive of discount)T&C</li>
+
+   <li> <span style="font-weight:650 ;"> Bank Offer</span> Test - 10% off on HDFC Bank Cardless EMI, up to ₹500. On orders of ₹3000 and aboveT&C</li>
+    
+   <li> <span style="font-weight:650 ;"> Bank Offer</span> 10% Off on Debit and Credit Card Upto ₹250T&C</li>
+    
+    <li> <span style="font-weight:650 ;">Bank Offer </span> Extra 10% off on All Debit Cards Upto ₹1000</li>
+</ul>
 <div> <br><br></div>
 <label for="delivery" style="margin-right:40px ;">Delivery</label><input type="number" placeholder="Enter pincode"> <input type="button" value="check">
 <br>
@@ -63,7 +73,8 @@
 <div><h6>Rating & Reviews</h6></div>
 </div>
 
-</div>
 </form>
+</div>
+<%- include("partials/footer.ejs") %> 
   </body>
 </html>

@@ -118,10 +118,10 @@ img:hower{
     margin:0px 0px 0px -30px;
 }
 .gift{
-    width: 1300px;
+    width: 100vw;
     height: 60px;
     font-size: larger;
-    margin:-1px 0px 90px 0px;
+    margin:-1px 0px -100px 0px;
     text-align:justify;
     border: 0px;
 }

@@ -124,13 +124,50 @@ app.get("/home", (req, res) => {
   res.render("home");
 });
 
-app.get("/home/deladdress",(req,res)=>{
-  res.render("deladdress");
+// app.get("/home/deladdress",(req,res)=>{
+//   res.render("deladdress");
+// })
+
+// app.get("/home/:product/payment",(req,res)=>{
+//   res.render("payment");
+// })
+
+app.get("/Buy_page", (req, res) => {
+  res.render("Buy_page");
+  // var sql="SELECT *FROM buy";
+  // con.query(sql, (err, result) => {
+  //   if (err) {
+  //     console.log(err);
+  //   }
+  //   res.render("Buy_page", { result: result });
+  // });
+});
+
+app.post("/Buy_page",(req,res) => {
+  res.redirect("DeliveryAddress");
 })
 
-app.get("/home/:product/payment",(req,res)=>{
+app.get("/DeliveryAddress",(req,res)=>{
+  res.render("DeliveryAddress");
+})
+app.post("/DeliveryAddress",(req,res)=>{
+  let name=req.body.name;
+  let contact=req.body.contact;
+  let pin=req.body.pin;
+  let locality=req.body.locality;
+  let address=req.body.address;
+  let city=req.body.city;
+  let landmark=req.body.landmark;
+  let state=req.body.state;
+  let alt_contact=req.body.contact;
+  //inserting...
+  res.redirect("/payment");
+
+})
+app.get("/payment",(req,res)=>{
   res.render("payment");
 })
+
 
 app.listen(3000, () => {
   console.log("Listening on port 3000!");
